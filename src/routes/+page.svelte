@@ -50,7 +50,7 @@
 
 <svelte:head>
   <title>Home</title>
-  <meta name="description" content="Svelte demo app" />
+  <meta name="description" content="Notenrechner - Simple grade calculcator" />
 </svelte:head>
 
 <section>
