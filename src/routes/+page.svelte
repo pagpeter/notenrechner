@@ -57,29 +57,29 @@
   <h1 class="font-black text-2xl p-5">Notenrechner</h1>
 
   <div class="p-5">
-    <ul class="p-3 w-50 bg-slate-300 rounded shadow">
+    <ul class="p-3 w-50 bg-slate-300 rounded shadow text-xs md:text-base">
       {#each grades as { name, grade, weight, id }}
         <li
-          class="flex justify-between items-center gap-2 bg-gray-200 p-2 rounded"
+          class="flex justify-between items-center md:gap-3 gap-1 bg-gray-200 p-2 rounded"
         >
           <p>
             <input
-              class="p-1 rounded bg-gray-200 outline outline-slate-200"
+              class="rounded bg-slate-300 p-1 outline outline-slate-200 w-10/12"
               bind:value={name}
             />
           </p>
-          <p>
+          <p class="bg-slate-300 p-1 rounded">
             <input
-              class="p-1 rounded bg-gray-200"
+              class="rounded bg-slate-300 w-9"
               type="number"
               max="15"
               min="0"
               bind:value={grade}
             /> pt.
           </p>
-          <p>
+          <p class="bg-slate-300 p-1 rounded">
             <input
-              class="p-1 rounded bg-gray-200 w-8"
+              class="rounded bg-slate-300 w-7"
               type="number"
               bind:value={weight}
               min="0"
