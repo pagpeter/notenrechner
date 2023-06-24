@@ -1,4 +1,4 @@
-import adapter from "@sveltejs/adapter-auto";
+import adapter from "@sveltejs/adapter-static";
 import { vitePreprocess } from "@sveltejs/kit/vite";
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -10,6 +10,10 @@ const config = {
     adapter: adapter(),
   },
   preprocess: vitePreprocess(),
+  paths: {
+    base:
+      process.env.NODE_ENV === "production" ? "/sveltekit-github-pages" : "",
+  },
 };
 
 export default config;
